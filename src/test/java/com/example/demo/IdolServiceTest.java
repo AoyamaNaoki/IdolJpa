@@ -9,11 +9,17 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class IdolServiceTest {
+	
 	@Autowired
 	private IdolService idolService;
 	
 	@Test
 	public void ServiceTest() {
-		idolService.create();
+		idolService.Create("nameTest",10);
+	}
+	
+	@Test
+	public void FindAllTest() {
+		idolService.FindAll();
 	}
 }
